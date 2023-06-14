@@ -8,7 +8,7 @@ class Opciones(Toplevel):
         super().__init__(master=master)
         self.title("Opciones")
         self.geometry("300x300")
-        label = Label(self,text="")
+        label = Label(self,text="No implementado")
         label.pack()
         self.grab_set()
 class Ruleta(Toplevel):
@@ -16,8 +16,12 @@ class Ruleta(Toplevel):
         super().__init__(master=master)
         self.title("Ruleta")
         self.geometry("500x600")
+        bg_ruleta = PhotoImage(file="images/fondo.png")
+        label_bg_rula = Label(self, image=bg_ruleta)
+        label_bg_rula.place(x=0,y=0)
         canvas = Canvas(self, width=400, height=400)
         canvas.pack()
+
         self.dibujar_ruleta(canvas)
         self.grab_set()
 
@@ -47,24 +51,17 @@ class Ruleta(Toplevel):
             canvas.create_text(x, y, text=str(i), fill=color_numeros, font=("Arial", 12), anchor=NW)
 
 
-menu = Tk()
-menu.geometry('800x533')
-menu.title('Menu principal')
-menu.resizable(width=False, height=False)
 
-# Configuración de la imagen de fondo
-bg_image = PhotoImage(file="")  # Reemplaza "ruta_de_la_imagen.png" con la ruta real de tu imagen
-label1 = Label(menu, image=bg_image)
-label1.place(x=0, y=0)
 
-titulo = Label(menu, text='Bienvenido al Casino')
-titulo.pack(pady=10)
+
+
+
         
 menu = Tk()
 menu.geometry('800x533')
 menu.title('Menu principal')
 menu.resizable(width=False, height=False)
-bg = PhotoImage(file="")
+bg = PhotoImage(file="images/fondo.png")
 label1 = Label(menu, image=bg)
 label1.place(x=0,y=0)
 titulo = Label(menu, text='Bienvenido al Casino')
