@@ -8,7 +8,7 @@ class Opciones(Toplevel):
         super().__init__(master=master)
         self.title("Opciones")
         self.geometry("300x300")
-        label = Label(self,text="lazaro puto")
+        label = Label(self,text="")
         label.pack()
         self.grab_set()
 class Ruleta(Toplevel):
