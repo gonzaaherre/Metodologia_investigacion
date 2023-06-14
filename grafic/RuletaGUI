@@ -1,0 +1,7 @@
+class RuletaGUI(Toplevel):
+    def __init__(self, master=None):
+        super().__init__(master=master)
+        self.title("Ruleta")
+        self.geometry("500x600")
+        self.grab_set()
+        self.mostrar_ruleta()
